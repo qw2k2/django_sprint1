@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Пост {{ post.id }}</title>
+</head>
+<body>
+    <h1>Пост {{ post.id }}</h1>
+    <p><strong>Дата:</strong> {{ post.date }}</p>
+    <p><strong>Локация:</strong> {{ post.location }}</p>
+    <p><strong>Категория:</strong> {{ post.category }}</p>
+    <p>{{ post.text }}</p>
+    <a href="{% url 'blog:index' %}">Назад</a>
+</body>
+</html>

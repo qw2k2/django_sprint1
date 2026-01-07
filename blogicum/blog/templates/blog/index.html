@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Блогикум — Главная</title>
+</head>
+<body>
+    <h1>Публикации</h1>
+    {% for post in posts %}
+      <h2><a href="{% url 'blog:post_detail' post.id %}">Пост {{ post.id }}</a></h2>
+      <p>{{ post.date }} — {{ post.location }}</p>
+      <p>{{ post.text }}</p>
+      <hr>
+    {% endfor %}
+</body>
+</html>
